@@ -2,7 +2,6 @@ const wbm = require("./wbm");
 const express = require("express");
 const app = express();
 const cors = require("cors");
-//const path = require("path");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -47,19 +46,4 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);
-});
-
-const http = require("http");
-
-const hostname = "127.0.0.1";
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World");
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
 });
