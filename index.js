@@ -30,7 +30,7 @@ app.post("/api", (req, res) => {
 });
 
 // Loading frontend
-app.use(express.static(path.join(__dirname, "./client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
